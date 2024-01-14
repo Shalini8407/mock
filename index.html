@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js">
+    </script>
+</head>
+
+<body class="">
+
+    <div class="">
+        <div class="md:flex flex-none relative ">
+
+            <!-- Sidebar -->
+            <div class="hidden md:block h-auto bg-white p-5 pt-8 w-25 grid grid-row-3">
+                <img src="Img\logo.jpg" class="w-20 h-20 pl-0" />
+
+                <button
+                    class="active:bg-blue-900 m-2 focus:bg-blue-700 w-10 h-10 text-slate-500 text-sm hover:bg-slate-300 p-2  rounded-md active:text-white focus:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class=" ">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </button>
+
+                <div class="text-slate-600 py-16">
+                    <button
+                        class="active:bg-blue-900 m-2 focus:bg-blue-700 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300 p-1 rounded-md  active:text-white focus:text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    </button>
+                    <br />
+                    <button
+                        class="active:bg-blue-900 m-2 focus:bg-blue-700 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300 p-1 rounded-md  active:text-white focus:text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+                        </svg>
+                    </button>
+                    <br />
+                    <button
+                        class="active:bg-blue-900 m-2 focus:bg-blue-700 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300 p-1 rounded-md  active:text-white focus:text-white">
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                        </svg>
+                    </button>
+                    <br />
+                    <button
+                        class="active:bg-blue-900 focus:bg-blue-700 m-2 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300 p-1 rounded-md active:text-white focus:text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="text-slate-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-10 h-10 text-slate-500 p-2 m-2 text-sm hover:bg-slate-300 p-1 rounded-md active:bg-blue-900 focus:bg-blue-900">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-10 h-10 text-slate-500 p-2 m-2 text-sm hover:bg-slate-300 p-1 rounded-md active:bg-blue-900 focus:bg-blue-900">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
+                </div>
+            </div>
+            <!-- Sidebar -->
+
+            <!--profile-->
+            <div class="md:w-1/5 bg-gray-50 rounded-md m-3">
+                <div class="p-4">
+                    <div class="flex">
+                        <img src="Img/profile.webp" class="rounded-full  w-16 h-16 drop-shadow-xl" />
+                        <div class="p-2 ml-3">
+                            <h1 class="text-3xl font-bold">Hi, Mike,</h1>
+                            <h3>Welcome back</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class=" m-2">
+                        <h4 class="font-bold text-slate-700">Today</h4>
+                        <div class="py-2">
+                            <h2 class="text-2xl font-bold">$19,892</h2>
+                            <p class="text-slate-500 text-xs font-bold">Account Balance</p>
+                        </div>
+                        <div class="py-2">
+                            <h3 class="text-md font-bold">$4,000</h3>
+                            <p class="text-slate-500 text-xs font-bold">Year-to-Date Contributions</p>
+                        </div>
+                        <div class="py-2">
+                            <h3 class="text-md font-bold">$1,892</h3>
+                            <p class="text-slate-500 text-xs font-bold">Total Interest</p>
+                        </div>
+                        <button class="rounded-md bg-blue-700 text-white p-3 m-2 w-full md:w-1/2 flex text-center">
+                            I want to
+                            <select id="task" class="form-select px-2 bg-blue-700 text-white p-3 m-2 w-full md:w-1/2 flex">
+
+                                <option value="78">Register</option>
+                                <option value="50">See Profile</option>
+                                <option value="78">Compare with peers</option>
+                                <option value="78">Strategy</option>
+
+                            </select>
+
+                        </button>
+                    </div>
+                    <div class="mt-7 m-2  ">
+                        <h4 class="font-bold text-slate-700 my-2">Recent Transactions</h4>
+                        <div class="py-2 border-b-2">
+                            <p class="text-slate-500 text-xs ">2020-08-07</p>
+                            <h2 class="text-sm font-bold text-slate-600">Withdrawl Transfer to Bank-XXX11</h2>
+                        </div>
+
+                        <div class="py-2 border-b-2">
+                            <p class="text-slate-500 text-xs ">2020-08-07</p>
+                            <h2 class="text-sm font-bold text-slate-600">Withdrawl Transfer to Bank-XXX11</h2>
+                        </div>
+
+                        <div class="py-2 border-b-2">
+                            <p class="text-slate-500 text-xs ">2020-08-07</p>
+                            <h2 class="text-sm font-bold text-slate-600">Withdrawl Transfer to Bank-XXX11</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--profile-->
+            <div class="md:w-3/5">
+                <div class="p-6 m-7 ">
+                    <div class="pb-2">
+                        <h3 class="text-blue-700 font-bold text-sm">Retirement Income</h3>
+                        <h2 class="text-black text-xl font-bold">Starting Year 2056</h2>
+                    </div>
+                    <div class="py-5 md:flex">
+                        <div class=" border-b-2 border-blue-600 p-5 pl-0 ml-0 mx-3 md:w-1/3 ">
+                            <h2 class="text-black text-xl font-bold">$300,000</h2>
+                            <p class="text-slate-600 text-xs"> My Goal</p>
+                        </div>
+                        <div class=" border-b-2 border-blue-600 p-5 pl-0 ml-0  mx-3 md:w-1/3">
+                            <h2 class="text-black text-xl font-bold">59%</h2>
+                            <p class="text-slate-600 text-xs"> Goal Acheived</p>
+                        </div>
+                        <div class=" border-b-2 border-blue-600 p-5 pl-0 ml-0  mx-3 md:w-1/3">
+                            <h2 class="text-black text-xl font-bold">$300</h2>
+                            <p class="text-slate-600 text-xs"> Est. Monthly Income</p>
+                        </div>
+                    </div>
+                    <div class="py-5">
+                        <h3 class="text-black font-bold ">Contributions Overtime</h3>
+                        <div> 
+                            <canvas id="stackedChartID" class="w-fit"></canvas> 
+                        </div> 
+
+                        <script> 
+  
+                            // Get the drawing context on the canvas 
+                            var myContext = document.getElementById( 
+                                "stackedChartID").getContext('2d'); 
+                            var myChart = new Chart(myContext, { 
+                                type: 'bar', 
+                                data: { 
+                                    labels: ["20", " ", "25",  
+                                        " ", "30", " ","35", " ", "40",  
+                                        " ", "60", " "], 
+                                    datasets: [{ 
+                                        label: 'Employer', 
+                                        backgroundColor: "#11009E", 
+                                        data: [25,30,37,40,43,45,50,55,57,60,63,66], 
+                                        barThickness: 20,
+                                    }, { 
+                                        label: 'Employee', 
+                                        backgroundColor: "#525CEB", 
+                                        data: [25,30,37,40,43,45,50,55,57,60,63,66], 
+                                        barThickness: 20,
+                                    }, { 
+                                        label: 'Total Interest', 
+                                        backgroundColor: "#92C7CF", 
+                                        data: [25,30,37,40,43,45,50,55,57,60,63,66], 
+                                        barThickness: 20,
+                                    }], 
+                                }, 
+                                options: { 
+                                    plugins: { 
+                                        title: { 
+                                            display: true, 
+                                            text: 'Contribution Overtime' 
+                                        }, 
+                                    }, 
+                                    scales: { 
+                                        x: { 
+                                            stacked: true, 
+                                            categoryPercentage: 0.2, // Adjust the gap between the bars
+                                        }, 
+                                        y: { 
+                                            stacked: true ,
+                                            maxTicksLimit: 3,
+                                        } 
+                                    } 
+                                } 
+                            }); 
+                        </script> 
+                    </div>
+                    <div>
+                        <div>
+                            <h3 class="text-black font-bold ">How do I compare to my peer?</h3>
+                            <p class="text-xs text-slate-600">These numbers represent current goal acheivement</p>
+                        </div>
+                        <div class="md:flex">
+                            <div class="md:w-1/3 p-3 text-slate-700">
+                                <div class="flex p-2">
+                                    <p class="font-bold">Age:</p>
+                                    <select id="AgeDropdown" class="form-select w-full px-2">
+
+                                        <option value="78">Under 30</option>
+
+                                        <option value="50">30-50</option>
+                                        <option value="78">50-70</option>
+                                        <option value="78">70-80</option>
+
+
+                                    </select>
+                                </div>
+                                <div class="flex p-2">
+                                    <p class="font-bold">Salary:</p>
+                                    <select id="Salary" class="form-select w-full px-2">
+
+                                        <option value="78">K 20 - K 30</option>
+                                        <option value="50">K 30 - K 50</option>
+                                        <option value="78">K 50 - K 70</option>
+                                        <option value="78">K 70 - K 80</option>
+
+                                    </select>
+                                </div>
+                                <div class="flex p-2">
+                                    <p class="font-bold">Gender:</p>
+                                    <select id="Gender" class="form-select w-full px-2">
+
+                                        <option value="M">Male</option>
+
+                                        <option value="F">Female</option>
+
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex w-2/3 px-3 mx-3">
+                                <div class="mr-4 p-2">
+                                    <svg height="80" width="80">
+                                        <!-- Doughnut Chart Background -->
+                                        <circle cx="45" cy="45" r="30" fill="#ecf0f3" />
+                                        <!-- Doughnut Chart Segment -->
+                                        <circle cx="45" cy="45" r="30" fill="transparent" stroke="#29ADB2"
+                                            stroke-width="10" stroke-dasharray="196.02666" stroke-dashoffset="56.548" />
+                                        <!-- Percentage Text -->
+                                        <text x="50%" y="50%" font-size="20" text-anchor="middle" dy="8"
+                                            fill="black">78%</text>
+                                    </svg>
+                                    <label class="text-center font-bold">Average</label>
+                                </div>
+                                <div class="mr-4 p-2">
+                                    <svg height="80" width="80">
+                                        <!-- Doughnut Chart Background -->
+                                        <circle cx="45" cy="45" r="30" fill="#ecf0f3" />
+                                        <!-- Doughnut Chart Segment -->
+                                        <circle cx="45" cy="45" r="30" fill="transparent" stroke="#29ADB2"
+                                            stroke-width="10" stroke-dasharray="240.02666" stroke-dashoffset="56.548" />
+                                        <!-- Percentage Text -->
+                                        <text x="50%" y="50%" font-size="20" text-anchor="middle" dy="8"
+                                            fill="black">95%</text>
+                                    </svg>
+                                    <label class="text-center font-bold">Top</label>
+                                </div>
+                                <div class="mr-4 p-2">
+                                    <svg height="80" width="80">
+                                        <!-- Doughnut Chart Background -->
+                                        <circle cx="45" cy="45" r="30" fill="#ecf0f3" />
+                                        <!-- Doughnut Chart Segment -->
+                                        <circle cx="45" cy="45" r="30" fill="transparent" stroke="#29ADB2"
+                                            stroke-width="10" stroke-dasharray="159.02666" stroke-dashoffset="56.548" />
+                                        <!-- Percentage Text -->
+                                        <text x="50%" y="50%" font-size="20" text-anchor="middle" dy="8"
+                                            fill="black">59%</text>
+                                    </svg>
+                                    <label class="text-center font-bold">Me</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/4 ">
+                <div class="bg-slate-50 p-6 rounded-md m-7">
+                    <div class="border-b-2 pb-2">
+                        <h4 class="font-bold text-slate-700 my-2">Retirement Strategy</h4>
+                        <!-- Inside the "Retirement Strategy" section -->
+                        <div class="py-2 flex">
+                            <label for="employeeContribution" class="block text-sm font-bold text-slate-600">
+                                Employee Contribution
+                            </label>
+                            <input id="employeeContribution" class="form-range w-full" type="range"
+                                onchange="updateValue('employeeContribution', 'employeeContributionValue')">
+                            <span id="employeeContributionValue" class="text-sm font-bold text-slate-600">50%</span>
+                        </div>
+
+                        <div class="py-2 flex">
+                            <label for="retirementAge" class="block text-sm font-bold text-slate-600">
+                                Retirement Age
+                            </label>
+                            <input id="retirementAge" class="form-range w-full" type="range"
+                                onchange="updateValue('retirementAge', 'retirementAgeValue')">
+                            <span id="retirementAgeValue" class="text-sm font-bold text-slate-600">50 years</span>
+                        </div>
+
+                        <!-- JavaScript to update the displayed values -->
+                        <script>
+                            function updateValue(inputId, spanId) {
+                                var inputValue = document.getElementById(inputId).value;
+
+                                // Update the corresponding span element
+                                document.getElementById(spanId).innerText = (inputId === 'employeeContribution') ? inputValue + '%' : inputValue + ' years';
+                            }
+                        </script>
+
+                    </div>
+                    <div>
+                        <div class="flex flex-row my-2 py-3">
+                            <h4 class="block text-sm font-bold text-slate-600 basis-5/6">Employee Contribution</h4>
+                            <h4 class="block text-sm font-bold text-slate-600 basis-1/6 mx-3">8.4%</h4>
+
+                        </div>
+                        <div class="flex my-2 py-3">
+                            <h4 class="block text-sm font-bold text-slate-600 basis-5/6">Interest Rate</h4>
+                            <h4 class="block text-sm font-bold text-slate-600 basis-1/6 mx-3">5%</h4>
+
+                        </div>
+                        <button class="m-2 p-2 mb-4 w-full text-white font-bold bg-blue-700 rounded-md">Update</button>
+                        <a href="" class="m-7 mt-5 font-medium text-blue-700 text-center "> View Help Docs ></a>
+                    </div>
+
+                </div>
+                <div class="border-l-2 p-6 border-blue-600 m-7">
+                    <p>Are you considering a</p>
+                    <p class="font-bold">House Advance?</p>
+                    <p class="text-xs text-slate-600">Limited time reduced interest.</p>
+                    <p class="font-medium text-blue-700 ">Learn More </p>
+
+                </div>
+            </div>
+            <div
+                class="md:hidden fixed bottom-0 left-0 z-50 w-fit h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+
+                <div class="text-slate-600 flex mx-3 ">
+                    <button
+                        class="active:bg-blue-900 m-2  focus:bg-blue-700 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300  rounded-md  active:text-white focus:text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    </button>
+                    <br />
+                    <button
+                        class="active:bg-blue-900 m-2  focus:bg-blue-700 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300  rounded-md  active:text-white focus:text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+                        </svg>
+                    </button>
+                    <br />
+                    <button
+                        class="active:bg-blue-900 m-2  focus:bg-blue-700 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300  rounded-md  active:text-white focus:text-white">
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                        </svg>
+                    </button>
+                    <br />
+                    <button
+                        class="active:bg-blue-900  focus:bg-blue-700 m-2 w-10 h-10 text-slate-500 p-2 text-sm hover:bg-slate-300  rounded-md active:text-white focus:text-white">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </button>
+                    <button
+                        class="active:bg-blue-900 m-2  focus:bg-blue-700 w-10 h-10 text-slate-500 text-sm hover:bg-slate-300 p-2  rounded-md active:text-white focus:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class=" ">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+</body>
+
+
+</html>
